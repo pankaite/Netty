@@ -1,4 +1,4 @@
-package com.kate.netty.nio;
+package com.kate.netty.aio;
 
 /*
  * @auther pankaite
@@ -19,7 +19,7 @@ public class TimeClient {
 				//default value
 			}
 		}
-		new Thread(new TimeClientHandle("127.0.0.1", port), "TimeClient-001").start();
+		new Thread(new AsyncTimeClientHandler("127.0.0.1", port), "AIO-AsyncTimeClientHandler-001").start();
 	}
 
 }
